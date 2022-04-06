@@ -34,7 +34,7 @@ module.exports.deleteTask = (req, res, next) => {
 };
 
 module.exports.deleteAll = (req, res, next) => {
-  Task.remove({}).then(result => {
+  Task.deleteMany({}).then(result => {
     res.send('deleted all!');
   });
 };
